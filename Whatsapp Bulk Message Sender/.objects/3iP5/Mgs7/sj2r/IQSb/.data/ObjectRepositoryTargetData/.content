@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TiFFMtgVAUewKurEenF6dQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="135d05c9-6375-4c35-9a83-cd7f9873d43f" CvTextArea="634, 89, 190, 20" CvType="AnyWordGroup" DesignTimeRectangle="636, 88, 189, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;uia cls='TextBlock' name='Yousef Mohamed (ASU)' /&gt;" FuzzySelectorArgument="&lt;uia cls='TextBlock' role='text' automationid='' /&gt;" Guid="c65c0461-dc70-4d2c-9950-e4cc66ed3933" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="135d05c9-6375-4c35-9a83-cd7f9873d43f" CvTextArea="634, 89, 190, 20" CvTextArgument="Yousef Mohamed (ASU)" CvType="Text" DesignTimeRectangle="546, 60, 1188, 80" ElementType="Button" FullSelectorArgument="&lt;uia automationid='TitleButton' cls='Button' name='Conversation info' /&gt;" FuzzySelectorArgument="&lt;uia automationid='TitleButton' cls='Button' name='Conversation info' role='button' check:fulltext='Yousef Mohamed (ASU)' /&gt;" Guid="08201bca-6bd3-496c-88ce-4475019e8ee5" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="acf324888dfd2713932fbfb71bbbc82e.png" xmlns="">0vsKpCbNY2UmYyfVKl3IqwQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

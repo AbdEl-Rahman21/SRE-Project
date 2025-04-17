@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5FJyN8994UW5nc6P28X4vw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="a093bc79-d9d9-468e-a5cc-ea384468b8e1" DesignTimeRectangle="546, 718, 1383, 80" DesignTimeScaleFactor="1.25" ElementType="ListItem" FuzzySelectorArgument="&lt;uia automationid='MessagesList' cls='ListView' name='Messages' /&gt;&lt;uia automationid='BubbleListItem' cls='ListViewItem' name='2 unread messages' role='list item' /&gt;" Guid="0bf38805-89dc-422e-9df4-85c7d7a891a9" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a3ea04bc2ca68dc4a2a2ed63807b9095.png" xmlns="">03ptMsbUxS0mVnim4Oex23g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
