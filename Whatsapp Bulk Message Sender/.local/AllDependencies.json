@@ -19406,16 +19406,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yousef\\.nuget\\packages\\": {},
+    "C:\\Users\\Abd El-Rahman Ali\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Whatsapp Bulk Message Sender",
       "projectName": "Whatsapp Bulk Message Sender",
-      "projectPath": "F:\\SW Reqs Project\\Whatsapp Bulk Message Sender\\.local",
-      "packagesPath": "C:\\Users\\Yousef\\.nuget\\packages\\",
-      "outputPath": "F:\\SW Reqs Project\\Whatsapp Bulk Message Sender\\.local",
+      "projectPath": "C:\\Users\\Abd El-Rahman Ali\\repos\\SRE-Project\\Whatsapp Bulk Message Sender\\.local",
+      "packagesPath": "C:\\Users\\Abd El-Rahman Ali\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Abd El-Rahman Ali\\repos\\SRE-Project\\Whatsapp Bulk Message Sender\\.local",
+      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ]
@@ -19439,7 +19440,7 @@
             "version": "[25.2.1-preview, 25.2.1-preview]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Yousef\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Abd El-Rahman Ali\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

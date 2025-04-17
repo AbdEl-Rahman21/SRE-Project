@@ -1,0 +1,13 @@
+﻿{
+  "Name": "WhatsApp",
+  "Type": "Screen",
+  "Id": "sj2rrdtNT026zAja69tflA",
+  "Reference": "j1R2-VyQRkSikjwCu6hTIg/sj2rrdtNT026zAja69tflA",
+  "ParentRef": "j1R2-VyQRkSikjwCu6hTIg/Mgs7vfff-0WFSO5FUZW0jQ",
+  "Created": "2025-04-17T13:24:07.867507Z",
+  "Updated": "2025-04-17T13:24:07.867507Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
