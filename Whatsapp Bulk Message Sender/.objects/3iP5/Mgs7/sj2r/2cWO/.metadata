@@ -1,13 +1,17 @@
 ﻿{
-  "Name": "2 unread messages",
+  "Name": "Unread Messages",
   "Type": "Element",
+  "TaxonomyType": "Element",
   "Id": "2cWOPeEVJ0KottJLNI2OOg",
   "Reference": "j1R2-VyQRkSikjwCu6hTIg/2cWOPeEVJ0KottJLNI2OOg",
   "ParentRef": "j1R2-VyQRkSikjwCu6hTIg/sj2rrdtNT026zAja69tflA",
   "Created": "2025-04-17T17:26:22.8814992Z",
-  "Updated": "2025-04-17T17:26:22.8814992Z",
+  "Updated": "2025-04-17T20:00:01.7348765Z",
   "CreatedBy": [
     "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
     "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
   ]
 }

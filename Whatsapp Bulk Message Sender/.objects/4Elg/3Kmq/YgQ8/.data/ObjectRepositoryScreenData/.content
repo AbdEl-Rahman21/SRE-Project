@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="Erwccj3qik6nyrSKCRowLg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="474, 121, 260, 344" FilePath="5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App" Selector="&lt;wnd app='whatsapp.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='PopupHost' /&gt;" Version="V2">
+      <imageRef attrName="InformativeScreenshot" originalValue="f8ec4954d52ce7a97e3797553efc52ea.png" xmlns="">0EfQk3cH3dkGUZN8t5cTTqA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

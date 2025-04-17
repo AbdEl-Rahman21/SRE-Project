@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NoFzC12BTkKYLEGYE9EhoQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="482, 75, 50, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;uia automationid='FilterButton' cls='ToggleButton' name='Filter chats by' /&gt;" FuzzySelectorArgument="&lt;uia automationid='FilterButton' cls='ToggleButton' name='Filter chats by' role='button' check:fulltext='' /&gt;" Guid="71aa38d5-44cf-4403-968f-dc1afc141ceb" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3e58cf3bf44413f4f06c77fbb7fbb6a0.png" xmlns="">0HbhUC9sX9kSIP8aZ19ePBg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
