@@ -48,7 +48,9 @@
         "sGroupNamesforSentMessages&Sequence_1",
         "sGroupNames&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "sListName"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
