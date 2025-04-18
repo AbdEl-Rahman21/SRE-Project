@@ -47,6 +47,7 @@
       <x:String>UiPath.Platform.Triggers</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
       <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -94,39 +95,53 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Send_Media_Files" sap:VirtualizedContainerService.HintSize="1282,1167" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Send_Media_Files" sap:VirtualizedContainerService.HintSize="1282,1552" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="552,1144" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="484,1529" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="518,1061" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d76f3df7-1253-4d4e-b933-348eb59957f4" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="File Explorer" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,851" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="990a8673-b00f-4376-8d0f-18f2ddafc4c1" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484,771" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,552" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d76f3df7-1253-4d4e-b933-348eb59957f4" Version="V4">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable ContentHash="PAuO-7NNjEuTJIjUCxjKHQ" DesignTimeRectangle="490, 691, 40, 40" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;uia automationid='AttachButton' cls='ToggleButton' name='Add attachment' /&gt;" FuzzySelectorArgument="&lt;uia automationid='AttachButton' cls='ToggleButton' name='Add attachment' role='button' check:fulltext='' /&gt;" Guid="6252c6fe-7908-461e-a7c6-1f6dbc80b43a" InformativeScreenshot="1fbeac9343aca468514651acf1250ea1.png" Reference="j1R2-VyQRkSikjwCu6hTIg/NRtC4BDb6k2xG58RIr7Inw" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive" />
-                </uix:NClick.Target>
-                <uix:NClick.VerifyOptions>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address Quick access'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="990a8673-b00f-4376-8d0f-18f2ddafc4c1" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CVScreenId="8cac5ab5-ed70-42ea-822a-e8b97964b452" ContentHash="A2XL9OtRIUKUijicMOFXyw" CvTextArea="153, 65, 70, 12" CvTextArgument="Quick access" CvType="Text" DesignTimeRectangle="115, 61, 1033, 22" DesignTimeScaleFactor="1" ElementType="Toolbar" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Quick access' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Quick access' check:text='Address: Quick access' /&gt;" Guid="f3124732-e8f8-4cf0-9045-041bf58c9c41" InformativeScreenshot="3d3f1ccb091e2491afe4ac0e8377731e.png" Reference="j1R2-VyQRkSikjwCu6hTIg/Xc0N0Y-ep0yYFletnEX8Nw" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='File Explorer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.Text>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">sMediaFolderPath</CSharpValue>
+                  </InArgument>
+                </uix:NTypeInto.Text>
+              </uix:NTypeInto>
+              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,240" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V4">
+                <uix:NKeyboardShortcuts.VerifyOptions>
                   <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
                     <uix:VerifyExecutionOptions.Retry>
                       <InArgument x:TypeArguments="x:Boolean" />
@@ -135,55 +150,38 @@
                       <InArgument x:TypeArguments="x:Double" />
                     </uix:VerifyExecutionOptions.Timeout>
                   </uix:VerifyExecutionOptions>
-                </uix:NClick.VerifyOptions>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </uix:NClick>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="PopupHost(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,652" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="2681ca9c-8af7-45cf-8449-5c03ffb1a9d0" Version="V2">
-                <uix:NApplicationCard.Body>
-                  <ActivityAction x:TypeArguments="x:Object">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,280" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Button(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d76f3df7-1253-4d4e-b933-348eb59957f4" Version="V4">
-                        <uix:NClick.Target>
-                          <uix:TargetAnchorable ContentHash="PAuO-7NNjEuTJIjUCxjKHQ" DesignTimeRectangle="490, 691, 40, 40" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;uia automationid='AttachButton' cls='ToggleButton' name='Add attachment' /&gt;" FuzzySelectorArgument="&lt;uia automationid='AttachButton' cls='ToggleButton' name='Add attachment' role='button' check:fulltext='' /&gt;" Guid="6252c6fe-7908-461e-a7c6-1f6dbc80b43a" InformativeScreenshot="1fbeac9343aca468514651acf1250ea1.png" Reference="j1R2-VyQRkSikjwCu6hTIg/NRtC4BDb6k2xG58RIr7Inw" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive" />
-                        </uix:NClick.Target>
-                        <uix:NClick.VerifyOptions>
-                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                            <uix:VerifyExecutionOptions.Retry>
-                              <InArgument x:TypeArguments="x:Boolean" />
-                            </uix:VerifyExecutionOptions.Retry>
-                            <uix:VerifyExecutionOptions.Timeout>
-                              <InArgument x:TypeArguments="x:Double" />
-                            </uix:VerifyExecutionOptions.Timeout>
-                          </uix:VerifyExecutionOptions>
-                        </uix:NClick.VerifyOptions>
-                      </uix:NClick>
-                    </Sequence>
-                  </ActivityAction>
-                </uix:NApplicationCard.Body>
-                <uix:NApplicationCard.TargetApp>
-                  <uix:TargetApp Area="421, 481, 162, 198" ContentHash="_iLNgDNtok-rsHG2iRYcng" FilePath="5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App" InformativeScreenshot="9e5e1d81c4a331087b5dc005444507a7.png" Reference="j1R2-VyQRkSikjwCu6hTIg/n0HkzlVNSkKzQBuSNUYPQQ" Selector="&lt;wnd app='whatsapp.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='PopupHost' /&gt;" Version="V2" />
-                </uix:NApplicationCard.TargetApp>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </uix:NApplicationCard>
+                </uix:NKeyboardShortcuts.VerifyOptions>
+              </uix:NKeyboardShortcuts>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1382, 744" ContentHash="hBL6WEsNBEioLPJZxHQPPA" FilePath="C:\\Windows\\explorer.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMPSURBVFhH7ZbfS1NhHMbPf9G/YKUQmKldGOL81dy0berSiIiIiKCrLoOuoiAiirqJNPBPKDNt/pzb/DE9uplaZi5znjTBzUA9R895+r5nr5xyx3BTdpMPfODl/b7P83w5V0c40pF2FGkSxEizgH3RJKzONQunuPVwZFr0Lw57idmXAlJhucMCzD8G5u6lzvfnIq81NPlUwH6YeXUMS+1WIPIA+HQrPWbugNcawuxd7JvPtyno5oHgtYYwfQOZhNcawtR1ZBJeawhT12iQOXitIUxeRSbhtYYweYUGmYPXGsLHy9iNNmGgpkL4b69ZNq81hIlL2EELN0INNWJrvAHKWAM2xYvYHE0NmTzMyzK2KYtl/tnBaw1hooEGDVTMjG5sjNRjbbAWq34XVvqd+Ol1Ytnr2BfsLfOsBlx6xjplsUyWjXCih9caQtgNLeTG9lgd1oO1iAWcaOnugLPl24FgGTG/Q8/comwtVE9LuM0WoOF4LRTRhV+DDiz12GF7HcHZF7MHgmUs9dr1TGXUBZU6EKozWSDkogWc9MiBeKAa0U6raWA6SF1VeqY84qAFnLSAy2SBcQe0sQtQRmoQ99sQ9VSahqWD1HkecZ8NcrAGKnWwLl5rCOM1tEA1LWCnx1ZEP5SbhqWD1FmhZ8pBO1SxmhaoMVlgzA5NtEEJ0ufqr6QFysj8JYnZ1hJE2iyYby/FQkcCdmZ3X2lm5pE8ZXqmPFxFC9jAunitIYhWaKNWKMP0ufrLEaUfjsJn00kstJdgpacMa74KrA8kYGd2t5dH8lgQ95ZDHqqESh2si9cawmgptGAplEF63FeM6PsiFDwJJxFtL8JqTzE2AiXYGrbosHOstxhSxzlTD7tnmfJACVTqwEipyQJDhdAGC6H48xHvzkO0NRdnHolJLL7LRawrD5v9+VAHCnTYmXmkNnOPRB42l30JD+vitYYQyBE1Xw4UbzbWPCew+CYLeQ+HkvjxNgtxmst9J6H6snXYmXmWWo+be1qz9PmOB/6c5H9CM52+78Nu+GhPpeM50v8sQfgNySA9UWSjAk8AAAAASUVORK5CYII=" InformativeScreenshot="1ce24b641a66a39353d54439a7e6770b.png" Reference="j1R2-VyQRkSikjwCu6hTIg/Au1A_ptG1UiqpxkeIhD_vg" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='File Explorer' /&gt;" Version="V2" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,595" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d76f3df7-1253-4d4e-b933-348eb59957f4" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,305" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'edit Type to Abdelrahma…'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,243" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d76f3df7-1253-4d4e-b933-348eb59957f4" Version="V4">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable CVScreenId="cd330962-e3fe-4c29-8943-4640a5a040fe" ContentHash="zuplmwlcU0eSmN0uVf-Yjg" CvTextArea="545, 702, 99, 17" CvTextArgument="Type a message" CvType="Text" DesignTimeRectangle="534, 691, 788, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to Abdelrahman Ali' /&gt;" FuzzySelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to Abdelrahman Ali' role='edit' /&gt;" Guid="1ee54f7e-6c11-4b20-afc9-fc63a7c0acfc" InformativeScreenshot="b910982efc46ccc769b7e332efd68f08.png" Reference="j1R2-VyQRkSikjwCu6hTIg/-TQaByKRJUmFGnRGkeDvwA" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.Text>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"[d(ctrl)]v[u(ctrl)]" + "[k(enter)]"</CSharpValue>
+                  </InArgument>
+                </uix:NTypeInto.Text>
+              </uix:NTypeInto>
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>

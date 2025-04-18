@@ -39,7 +39,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Extract List Name & Media Location.xaml",
+      "Path": "Extract Data.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "sListName&Sequence_1",
@@ -94,6 +94,17 @@
       "Path": "ExtractMessage.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Retrieve Group Names Form the List.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Dt_ExtractedGroupNames&Sequence_1",
+        "Arr_GroupNames&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

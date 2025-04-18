@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Address Quick access",
+  "Type": "Element",
+  "Id": "Xc0N0Y-ep0yYFletnEX8Nw",
+  "Reference": "j1R2-VyQRkSikjwCu6hTIg/Xc0N0Y-ep0yYFletnEX8Nw",
+  "ParentRef": "j1R2-VyQRkSikjwCu6hTIg/Au1A_ptG1UiqpxkeIhD_vg",
+  "Created": "2025-04-18T13:18:42.2068352Z",
+  "Updated": "2025-04-18T13:18:42.2068352Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.2.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
