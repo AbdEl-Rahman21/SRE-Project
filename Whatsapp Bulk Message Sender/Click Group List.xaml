@@ -1,4 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Click_Group_List" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Click_Group_List" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_str_listName" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -40,6 +45,7 @@
       <x:String>System.Numerics</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -103,28 +109,23 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Click_Group_List" sap:VirtualizedContainerService.HintSize="1172,2281.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Click_Group_List" sap:VirtualizedContainerService.HintSize="1172,2321.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Enum_ListElements" />
-      <Variable x:TypeArguments="x:String" Name="str_ListName" />
-      <Variable x:TypeArguments="x:String" Name="in_ListName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Favorites</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="enum_listElements" />
+      <Variable x:TypeArguments="x:String" Name="str_listName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="587.2,2258.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6e9dc150-6f25-4bcd-8d85-eb3411befedd" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="587.2,2298.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6e9dc150-6f25-4bcd-8d85-eb3411befedd" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="553.6,1968" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="553.6,2008" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -145,7 +146,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="PopupHost" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="520,1680.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="604adac6-809c-4fee-a74e-35a980fdabe5" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="PopupHost" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="520,1720.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="604adac6-809c-4fee-a74e-35a980fdabe5" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -175,7 +176,7 @@
                     <ui:FindChildren DisplayName="Find Children" Filter="&lt;uia /&gt;" sap:VirtualizedContainerService.HintSize="452.8,118.4" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
                       <ui:FindChildren.Children>
                         <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
-                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Enum_ListElements</CSharpReference>
+                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">enum_listElements</CSharpReference>
                         </OutArgument>
                       </ui:FindChildren.Children>
                       <ui:FindChildren.Target>
@@ -213,14 +214,14 @@
                               </uix:NGetText.Target>
                               <uix:NGetText.TextString>
                                 <OutArgument x:TypeArguments="x:String">
-                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">str_ListName</CSharpReference>
+                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">str_listName</CSharpReference>
                                 </OutArgument>
                               </uix:NGetText.TextString>
                             </uix:NGetText>
                             <If sap:VirtualizedContainerService.HintSize="417.6,488" sap2010:WorkflowViewState.IdRef="If_1">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
-                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">str_ListName.Equals(in_ListName)</CSharpValue>
+                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">str_listName.Equals(in_str_listName)</CSharpValue>
                                 </InArgument>
                               </If.Condition>
                               <If.Then>
@@ -235,7 +236,7 @@
                                       <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" Guid="fd2dca03-bd88-430f-b356-7f33428b3bad" ScopeSelectorArgument="&lt;wnd app='whatsapp.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='PopupHost' /&gt;" SearchSteps="Selector">
                                         <uix:TargetAnchorable.FullSelectorArgument>
                                           <InArgument x:TypeArguments="x:String">
-                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">string.Format("&lt;uia cls='MenuFlyoutItem' name='{0}' /&gt;", str_ListName)</CSharpValue>
+                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">string.Format("&lt;uia cls='MenuFlyoutItem' name='{0}' /&gt;", str_listName)</CSharpValue>
                                           </InArgument>
                                         </uix:TargetAnchorable.FullSelectorArgument>
                                       </uix:TargetAnchorable>
@@ -270,7 +271,7 @@
                       </ui:ForEach.Body>
                       <ui:ForEach.Values>
                         <InArgument x:TypeArguments="sc:IEnumerable">
-                          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Enumerable.Range(1, Enum_ListElements.Count())</CSharpValue>
+                          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">Enumerable.Range(1, enum_listElements.Count())</CSharpValue>
                         </InArgument>
                       </ui:ForEach.Values>
                     </ui:ForEach>
