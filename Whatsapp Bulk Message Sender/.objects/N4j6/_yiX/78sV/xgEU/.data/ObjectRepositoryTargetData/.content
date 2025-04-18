@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="_u9q-YGAskepHCuYEoU3fg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="34, 267, 233, 380" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid' /&gt;&lt;uia name='Table1' role='table' tableRow='1' /&gt;&lt;uia automationid='A2' cls='XLSpreadsheetCell' name='A2' tableRow='1' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Grid' cls='XLSpreadsheetGrid' name='Grid' /&gt;&lt;uia name='Table1' role='table' /&gt;&lt;uia automationid='A2' cls='XLSpreadsheetCell' name='A2' role='item' check:text='مسائكم طيب ومليان بالخيرات✨&amp;#xA;رجعنالكم في شهر ابريل بأقوى العروض‍♂&amp;#xA;&amp;#xA;1- اشتري 4 بروتين بار هليثي اند تيستي بسعر 100ج&amp;#xA;2- اشتري 4 ايس كريم (كيتو _ عالي البروتين) بسعر 100ج&amp;#xA;3- اشتري 4 عصير فيردي ستيفيا ومعاه 1 هيلثي كولا ليمون مجانا&amp;#xA;4- اشتري 3 هيلثي كولا اطعمة مختلفة بسعر 45ج&amp;#xA;5- اشتري 2 زيت زيتون بخصم 10%&amp;#xA;6- اشتري 1 عصير هيلثي اند تيستي (كوكتيل _ عنب) ومعاه قطعة مجانا&amp;#xA;&amp;#xA;حدائق القبة _ 115 مصر والسودان _ بجوار كنتاكي&amp;#xA;☎01095944669' /&gt;" Guid="c00cfc6f-9318-4d49-bf8f-b4da5a177361" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Sender Data - Excel' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9e353784d07aede6a59e34f8b397dcf9.png" xmlns="">0iVbKrrTCNEana3mj09roOg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
