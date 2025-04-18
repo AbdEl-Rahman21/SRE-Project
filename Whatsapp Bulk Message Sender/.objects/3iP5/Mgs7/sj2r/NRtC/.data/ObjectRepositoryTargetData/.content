@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="PAuO-7NNjEuTJIjUCxjKHQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="490, 691, 40, 40" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;uia automationid='AttachButton' cls='ToggleButton' name='Add attachment' /&gt;" FuzzySelectorArgument="&lt;uia automationid='AttachButton' cls='ToggleButton' name='Add attachment' role='button' check:fulltext='' /&gt;" Guid="6252c6fe-7908-461e-a7c6-1f6dbc80b43a" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1fbeac9343aca468514651acf1250ea1.png" xmlns="">0fT0J-EilTEeTRpTUyVUTzQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

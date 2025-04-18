@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="UQSzPJW5F0-PNwwJEU4wbg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 162, 198" DesignTimeScaleFactor="1" Guid="8551313b-fac7-42c9-ba5a-6bd19e468d9a" ScopeSelectorArgument="&lt;wnd app='whatsapp.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='PopupHost' /&gt;" SearchSteps="Selector" Version="V5">
+      <imageRef attrName="InformativeScreenshot" originalValue="c569c505d69fa0374a391eebe1b23bca.png" xmlns="">0UvzsWQw80kOUwuoMPOfkEw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">NativeTrigger</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
