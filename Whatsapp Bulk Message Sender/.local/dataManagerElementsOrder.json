@@ -11,7 +11,13 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "arr_groupsWithUnreadMessages&Sequence_1",
+        "bool_hasUnreadMessages&Sequence_1",
+        "str_listName&Sequence_1",
+        "str_mediaFolderPath&Sequence_1",
+        "arr_groupNames&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -20,11 +26,12 @@
       "Path": "Click Group List.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "Enum_ListElements&Sequence_1",
-        "str_ListName&Sequence_1",
-        "in_ListName&Sequence_1"
+        "enum_listElements&Sequence_1",
+        "str_listName&Sequence_1"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_listName"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -77,7 +84,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "sMediaFolderPath"
+        "in_str_mediaFolderPath"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -85,10 +92,11 @@
     {
       "Path": "Check for Unread Messages.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "bool_HasUnreadMessages&Sequence_1"
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_groupName",
+        "out_bool_hasUnreadMessages"
       ],
-      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -108,6 +116,18 @@
         "Arr_GroupNames&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Retrieve Group Names.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_extractedGroupNames&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_arr_groupNames"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

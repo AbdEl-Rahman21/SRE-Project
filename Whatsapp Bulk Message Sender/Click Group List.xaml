@@ -119,7 +119,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="587.2,2298.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6e9dc150-6f25-4bcd-8d85-eb3411befedd" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="587.2,2298.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="6e9dc150-6f25-4bcd-8d85-eb3411befedd" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

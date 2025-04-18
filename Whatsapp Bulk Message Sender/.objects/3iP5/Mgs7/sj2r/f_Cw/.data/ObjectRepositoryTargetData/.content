@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Qk3P98emsUSz7A2QnPCWRA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="d5b843b2-973f-4620-855c-c94e8ebf26dd" CvElementArea="94, 136, 427, 43" CvType="InputBox" DesignTimeRectangle="95, 139, 425, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' /&gt;" FuzzySelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' role='edit' /&gt;" Guid="81775284-bbc3-45b7-a0ed-ba24af3f0681" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d5b843b2-973f-4620-855c-c94e8ebf26dd" CvTextArea="139, 87, 102, 22" CvTextArgument="Favorites" CvType="Text" DesignTimeRectangle="140, 86, 397, 35" ElementType="Text" FullSelectorArgument="&lt;uia automationid='LeftPanelTitleText' cls='TextBlock' /&gt;" FuzzySelectorArgument="&lt;uia automationid='LeftPanelTitleText' cls='TextBlock' role='text' /&gt;" Guid="69b66bf8-b71c-4f32-8a49-99da86814095" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b02eb8dd9a19437f62976420c306e2fe.png" xmlns="">07VHHRWqTnki77Sc0gWVPdg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

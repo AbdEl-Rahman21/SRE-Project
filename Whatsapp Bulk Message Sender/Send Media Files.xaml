@@ -1,6 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Send_Media_Files" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="sMediaFolderPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_mediaFolderPath" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -103,98 +103,112 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Send_Media_Files" sap:VirtualizedContainerService.HintSize="1282,1552" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Send_Media_Files" sap:VirtualizedContainerService.HintSize="1172,1652" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="484,1529" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="File Explorer" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,660.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="IfNotOpen" ScopeGuid="990a8673-b00f-4376-8d0f-18f2ddafc4c1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,321.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="416,260" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="990a8673-b00f-4376-8d0f-18f2ddafc4c1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V4">
+              <uix:NKeyboardShortcuts.HealingAgentBehavior>
+                <InArgument x:TypeArguments="uix:NChildHealingAgentBehavior">
+                  <Literal x:TypeArguments="uix:NChildHealingAgentBehavior" sap2010:WorkflowViewState.IdRef="Literal`1_1">
+                    <Literal.Result>
+                      <OutArgument x:TypeArguments="uix:NChildHealingAgentBehavior" />
+                    </Literal.Result>
+                  </Literal>
+                </InArgument>
+              </uix:NKeyboardShortcuts.HealingAgentBehavior>
+              <uix:NKeyboardShortcuts.Target>
+                <uix:TargetAnchorable ContentHash="AzkRiVMbd0a9Kcn_HD3how" DesignTimeRectangle="222, 111, 1707, 899" DesignTimeScaleFactor="1.25" ElementType="List" FullSelectorArgument="&lt;wnd aaname='Shell Folder View' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Shell Folder View' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;" Guid="19a71085-edb1-4fb7-8ee2-82340c3a827e" InformativeScreenshot="992f53fbd1aeb19c94786cc6d82f5637.png" Reference="j1R2-VyQRkSikjwCu6hTIg/WvAfXky7Y0i0ka69Q1xkFw" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Media' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive" />
+              </uix:NKeyboardShortcuts.Target>
+              <uix:NKeyboardShortcuts.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NKeyboardShortcuts.VerifyOptions>
+            </uix:NKeyboardShortcuts>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" ContentHash="aU5flXGYS0ipZIaPsmivnw" FilePath="C:\\Windows\\explorer.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMPSURBVFhH7ZbfS1NhHMbPf9G/YKUQmKldGOL81dy0berSiIiIiKCrLoOuoiAiirqJNPBPKDNt/pzb/DE9uplaZi5znjTBzUA9R895+r5nr5xyx3BTdpMPfODl/b7P83w5V0c40pF2FGkSxEizgH3RJKzONQunuPVwZFr0Lw57idmXAlJhucMCzD8G5u6lzvfnIq81NPlUwH6YeXUMS+1WIPIA+HQrPWbugNcawuxd7JvPtyno5oHgtYYwfQOZhNcawtR1ZBJeawhT12iQOXitIUxeRSbhtYYweYUGmYPXGsLHy9iNNmGgpkL4b69ZNq81hIlL2EELN0INNWJrvAHKWAM2xYvYHE0NmTzMyzK2KYtl/tnBaw1hooEGDVTMjG5sjNRjbbAWq34XVvqd+Ol1Ytnr2BfsLfOsBlx6xjplsUyWjXCih9caQtgNLeTG9lgd1oO1iAWcaOnugLPl24FgGTG/Q8/comwtVE9LuM0WoOF4LRTRhV+DDiz12GF7HcHZF7MHgmUs9dr1TGXUBZU6EKozWSDkogWc9MiBeKAa0U6raWA6SF1VeqY84qAFnLSAy2SBcQe0sQtQRmoQ99sQ9VSahqWD1HkecZ8NcrAGKnWwLl5rCOM1tEA1LWCnx1ZEP5SbhqWD1FmhZ8pBO1SxmhaoMVlgzA5NtEEJ0ufqr6QFysj8JYnZ1hJE2iyYby/FQkcCdmZ3X2lm5pE8ZXqmPFxFC9jAunitIYhWaKNWKMP0ufrLEaUfjsJn00kstJdgpacMa74KrA8kYGd2t5dH8lgQ95ZDHqqESh2si9cawmgptGAplEF63FeM6PsiFDwJJxFtL8JqTzE2AiXYGrbosHOstxhSxzlTD7tnmfJACVTqwEipyQJDhdAGC6H48xHvzkO0NRdnHolJLL7LRawrD5v9+VAHCnTYmXmkNnOPRB42l30JD+vitYYQyBE1Xw4UbzbWPCew+CYLeQ+HkvjxNgtxmst9J6H6snXYmXmWWo+be1qz9PmOB/6c5H9CM52+78Nu+GhPpeM50v8sQfgNySA9UWSjAk8AAAAASUVORK5CYII=" InformativeScreenshot="1ce24b641a66a39353d54439a7e6770b.png" Reference="j1R2-VyQRkSikjwCu6hTIg/Au1A_ptG1UiqpxkeIhD_vg" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='File Explorer' /&gt;" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">"\"" + in_str_mediaFolderPath + "\""</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Arguments>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,968" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" OpenMode="Never" ScopeGuid="d76f3df7-1253-4d4e-b933-348eb59957f4" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,677.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="d76f3df7-1253-4d4e-b933-348eb59957f4" Text="%[d(ctrl)]v[u(ctrl)]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="8befc4f3-d4cf-4ca0-a2c1-7d6d13386cc1" ContentHash="7lQ_NvOElkOFyAtweRadXg" CvTextArea="679, 994, 125, 23" CvTextArgument="Type a message" CvType="Text" DesignTimeRectangle="666, 981, 1198, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to group Test3' /&gt;" FuzzySelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to group Test3' role='edit' /&gt;" Guid="6e5218d2-6bd2-4757-b85b-ab4abfb22de1" InformativeScreenshot="b1a45c7af4ba340b2c395cb7eae766cc.png" Reference="j1R2-VyQRkSikjwCu6hTIg/-TQaByKRJUmFGnRGkeDvwA" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="8befc4f3-d4cf-4ca0-a2c1-7d6d13386cc1" CvTextArea="679, 994, 125, 23" CvTextArgument="Type a message" CvType="Text" DesignTimeRectangle="679, 994, 125, 23" ElementType="Text" Guid="42a959c2-9b6c-4606-b263-4a5b8d2bfa52" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d76f3df7-1253-4d4e-b933-348eb59957f4" Text="%[k(enter)]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="bf850feb-d7c5-400b-bf15-4728c9613c6a" ContentHash="crdXTiPG9UmSKGp-Ftun0w" CvTextArea="632, 900, 144, 23" CvTextArgument="[aption (optional)" CvType="Text" DesignTimeRectangle="636, 887, 530, 55" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='CaptionEditBox' cls='RichEditBox' name='Caption (optional)' /&gt;" FuzzySelectorArgument="&lt;uia automationid='CaptionEditBox' cls='RichEditBox' name='Caption (optional)' role='edit' /&gt;" Guid="c146b119-5671-47c2-b222-7fdf7c24a260" InformativeScreenshot="d695d475a377567eaaf22ff2e3ba8d3f.png" Reference="j1R2-VyQRkSikjwCu6hTIg/YIhs3sPupkmCV7VpOusNbA" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="574, 890, 50, 50" ElementType="Button" FullSelectorArgument="&lt;uia automationid='EmojiButton' cls='Button' name='Add emoji' /&gt;" FuzzySelectorArgument="&lt;uia automationid='EmojiButton' cls='Button' name='Add emoji' role='button' check:fulltext='' /&gt;" Guid="1489caec-f09e-4242-9240-94cf1749384a" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" ContentHash="7K4FVI452E6sQUiJkLoe9w" FilePath="5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAqFBMVEUAAAAgz3Akz2gl02Uj02cm02Yl1GYl1GYl02Ul02Yl02ck02gl0mUl0mcl1Gcm1GYgz2gl02Uj0mYn02coz2gm1Gkl0mYl0mUk02Uk02Qk02cl1GYgz2Alz2Ul0mYl0mYl1GUn0WYk02Yk0WYk1GYl02Yl0mQk0WYj0mMk02Ym02cj0WUj0mUj1Wck1GYl0WYj02Um0mcl02Yl1GUm1WYm02Yl0mgk02bOtTm3AAAAOHRSTlMAEEBvkK/P3+//v0Bgn59fIL9QbyBfj++/QL+PEDCg3zBwgHBw76CAUK+vkGBPz6CQsM+ff39gz/VWmMYAAAQaSURBVHgBrZnpYqs4DIXlshgRErIwQ6Ek3And973v/2Szz8hxDsXm8v25S4sU6UiKbMgNdRKEUawT/pNEp1EYzBRNhcrmmgHxIl9OYD1Y8TekP+njZMWDROvxH16zEzqnMWwSFqZ3caJZmN5FEbE3Cw+5f8HZmSoI9SsDytMwyKq/yYKwLhlw1jilRx8bn2dH8W+zXcs22iFN28S2HlbUQ7UrbQ8/BtPPh7SB+n6M2GHkA8VvmXfQzXbxm7v9ck9OdO2wB5SfU+fCLnZuWdqyQXlOHnQHav9wqM/WcwwXLQsX8GGlzfQo8qRIWdCo48z+vaQRXLJwBqoN2R/vIQcCYPv+HrAMOyP/NBpDhwgkSOpnLI1RSzMykQSVYn8EhfSD7gngoL+yKE3TyMdlh0eGBLAgQa3+FazxlcF+LIMCqJj/5WpckjoQwDnsPK8Q9scqXEsAWBfuyIP2qJBuYP9pFlLyILMfK3oDEGbjQmgsU7lVDcItedBZqU2Rlg0LvjI35UGOCtgDFQu+lUp3BznKYKIztkIgD+TT3ZtztAV5FB7Ig/9zNCeiR5Ah4GBOHjwZvdaAGgIp4nxcKzRGvrZ4hRnzLVEYunZYxqZEAfiL0ElJ1WDs+lQpfvpZBtEzbkf52ahOeBFfHfXm6JE8kY/3Slp64pA9mET+ZaRFjhmYKPIzTyopHWzECiEe7YCBA7TknE3rAEzU2YQOhA7smr4OgMi423QzTmRQpnjJ4bgZV6aPoNGwDLFHlq5kAIFRAWoVXhS8sd4sh0aF/DUdPrboNRm8g1scMOzMcQ15ZYMP+f81uigC41qy3BNt8wovheTMBVxsjeJv2C4jeAQW0pnYt12gr0yp0zm5eeA4l9UeHjdkU3mVDQCIIB5e+RCdsM0rPJEt0OIFaCIeoobdk8sWCjtB2Ps42EnhgOV3cGXGPKOvqhpt28NSAyS/4DzQ4KOtX5paErTdWqnrelXU3McVCuDlSHTtdwMoXKIAZCNvPTbE63rA/gakrfM6Thb2lW95ju+FclBXL+REZfgo98qaEkD30n/JrYJ5Xdfz8Fr13bzmeJ3/OYoEBnBtTteRiACgXq6Q1zGsmOGJL4Ua+/OGj1xY47H2JUGTa/wGZuuEGqsVC60imlZjfLOONZ7gteGWhEk0LlZs8klCr8ZqHURxTk58JGwiow9r/Ldt7f5yL9OM7GONxbasisrjlTDIz8FWoRmQLHq74yQ8equ3hRcXQ+hFfvTgMpuLdVyforELSRoG2exvsiBcJXA3gum85oko1wS54mnofQuQ8hS0FQluGuuWXZG9wlFjfRNcK7BlCR6vhK+BbfnhDQ9yCpMjXCHbQpHV31oHHx5pDG2Lj90XFGmeKRrmC9u2UFUQ3tS6/FtR/XUTBpUiJ/4AvNupVaCrjDsAAAAASUVORK5CYII=" InformativeScreenshot="7e5802a0ad405d0c4ae69fba986f3902.png" Reference="j1R2-VyQRkSikjwCu6hTIg/sj2rrdtNT026zAja69tflA" Selector="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="File Explorer" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,851" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="990a8673-b00f-4376-8d0f-18f2ddafc4c1" Version="V2">
-        <uix:NApplicationCard.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,552" sap2010:WorkflowViewState.IdRef="Sequence_5">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Address Quick access'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="990a8673-b00f-4376-8d0f-18f2ddafc4c1" Version="V4">
-                <uix:NTypeInto.Target>
-                  <uix:TargetAnchorable CVScreenId="8cac5ab5-ed70-42ea-822a-e8b97964b452" ContentHash="A2XL9OtRIUKUijicMOFXyw" CvTextArea="153, 65, 70, 12" CvTextArgument="Quick access" CvType="Text" DesignTimeRectangle="115, 61, 1033, 22" DesignTimeScaleFactor="1" ElementType="Toolbar" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Quick access' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Quick access' check:text='Address: Quick access' /&gt;" Guid="f3124732-e8f8-4cf0-9045-041bf58c9c41" InformativeScreenshot="3d3f1ccb091e2491afe4ac0e8377731e.png" Reference="j1R2-VyQRkSikjwCu6hTIg/Xc0N0Y-ep0yYFletnEX8Nw" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='File Explorer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
-                </uix:NTypeInto.Target>
-                <uix:NTypeInto.Text>
-                  <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">sMediaFolderPath</CSharpValue>
-                  </InArgument>
-                </uix:NTypeInto.Text>
-              </uix:NTypeInto>
-              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,240" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V4">
-                <uix:NKeyboardShortcuts.VerifyOptions>
-                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                    <uix:VerifyExecutionOptions.Retry>
-                      <InArgument x:TypeArguments="x:Boolean" />
-                    </uix:VerifyExecutionOptions.Retry>
-                    <uix:VerifyExecutionOptions.Timeout>
-                      <InArgument x:TypeArguments="x:Double" />
-                    </uix:VerifyExecutionOptions.Timeout>
-                  </uix:VerifyExecutionOptions>
-                </uix:NKeyboardShortcuts.VerifyOptions>
-              </uix:NKeyboardShortcuts>
-            </Sequence>
-          </ActivityAction>
-        </uix:NApplicationCard.Body>
-        <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-8, -8, 1382, 744" ContentHash="hBL6WEsNBEioLPJZxHQPPA" FilePath="C:\\Windows\\explorer.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMPSURBVFhH7ZbfS1NhHMbPf9G/YKUQmKldGOL81dy0berSiIiIiKCrLoOuoiAiirqJNPBPKDNt/pzb/DE9uplaZi5znjTBzUA9R895+r5nr5xyx3BTdpMPfODl/b7P83w5V0c40pF2FGkSxEizgH3RJKzONQunuPVwZFr0Lw57idmXAlJhucMCzD8G5u6lzvfnIq81NPlUwH6YeXUMS+1WIPIA+HQrPWbugNcawuxd7JvPtyno5oHgtYYwfQOZhNcawtR1ZBJeawhT12iQOXitIUxeRSbhtYYweYUGmYPXGsLHy9iNNmGgpkL4b69ZNq81hIlL2EELN0INNWJrvAHKWAM2xYvYHE0NmTzMyzK2KYtl/tnBaw1hooEGDVTMjG5sjNRjbbAWq34XVvqd+Ol1Ytnr2BfsLfOsBlx6xjplsUyWjXCih9caQtgNLeTG9lgd1oO1iAWcaOnugLPl24FgGTG/Q8/comwtVE9LuM0WoOF4LRTRhV+DDiz12GF7HcHZF7MHgmUs9dr1TGXUBZU6EKozWSDkogWc9MiBeKAa0U6raWA6SF1VeqY84qAFnLSAy2SBcQe0sQtQRmoQ99sQ9VSahqWD1HkecZ8NcrAGKnWwLl5rCOM1tEA1LWCnx1ZEP5SbhqWD1FmhZ8pBO1SxmhaoMVlgzA5NtEEJ0ufqr6QFysj8JYnZ1hJE2iyYby/FQkcCdmZ3X2lm5pE8ZXqmPFxFC9jAunitIYhWaKNWKMP0ufrLEaUfjsJn00kstJdgpacMa74KrA8kYGd2t5dH8lgQ95ZDHqqESh2si9cawmgptGAplEF63FeM6PsiFDwJJxFtL8JqTzE2AiXYGrbosHOstxhSxzlTD7tnmfJACVTqwEipyQJDhdAGC6H48xHvzkO0NRdnHolJLL7LRawrD5v9+VAHCnTYmXmkNnOPRB42l30JD+vitYYQyBE1Xw4UbzbWPCew+CYLeQ+HkvjxNgtxmst9J6H6snXYmXmWWo+be1qz9PmOB/6c5H9CM52+78Nu+GhPpeM50v8sQfgNySA9UWSjAk8AAAAASUVORK5CYII=" InformativeScreenshot="1ce24b641a66a39353d54439a7e6770b.png" Reference="j1R2-VyQRkSikjwCu6hTIg/Au1A_ptG1UiqpxkeIhD_vg" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='File Explorer' /&gt;" Version="V2" />
-        </uix:NApplicationCard.TargetApp>
-      </uix:NApplicationCard>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,595" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d76f3df7-1253-4d4e-b933-348eb59957f4" Version="V2" WindowResize="Maximize">
-        <uix:NApplicationCard.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,305" sap2010:WorkflowViewState.IdRef="Sequence_3">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'edit Type to Abdelrahma…'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,243" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d76f3df7-1253-4d4e-b933-348eb59957f4" Version="V4">
-                <uix:NTypeInto.Target>
-                  <uix:TargetAnchorable CVScreenId="cd330962-e3fe-4c29-8943-4640a5a040fe" ContentHash="zuplmwlcU0eSmN0uVf-Yjg" CvTextArea="545, 702, 99, 17" CvTextArgument="Type a message" CvType="Text" DesignTimeRectangle="534, 691, 788, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to Abdelrahman Ali' /&gt;" FuzzySelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to Abdelrahman Ali' role='edit' /&gt;" Guid="1ee54f7e-6c11-4b20-afc9-fc63a7c0acfc" InformativeScreenshot="b910982efc46ccc769b7e332efd68f08.png" Reference="j1R2-VyQRkSikjwCu6hTIg/-TQaByKRJUmFGnRGkeDvwA" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive" />
-                </uix:NTypeInto.Target>
-                <uix:NTypeInto.Text>
-                  <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"[d(ctrl)]v[u(ctrl)]" + "[k(enter)]"</CSharpValue>
-                  </InArgument>
-                </uix:NTypeInto.Text>
-              </uix:NTypeInto>
-            </Sequence>
-          </ActivityAction>
-        </uix:NApplicationCard.Body>
-        <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="-9, -9, 1938, 1048" ContentHash="7K4FVI452E6sQUiJkLoe9w" FilePath="5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAqFBMVEUAAAAgz3Akz2gl02Uj02cm02Yl1GYl1GYl02Ul02Yl02ck02gl0mUl0mcl1Gcm1GYgz2gl02Uj0mYn02coz2gm1Gkl0mYl0mUk02Uk02Qk02cl1GYgz2Alz2Ul0mYl0mYl1GUn0WYk02Yk0WYk1GYl02Yl0mQk0WYj0mMk02Ym02cj0WUj0mUj1Wck1GYl0WYj02Um0mcl02Yl1GUm1WYm02Yl0mgk02bOtTm3AAAAOHRSTlMAEEBvkK/P3+//v0Bgn59fIL9QbyBfj++/QL+PEDCg3zBwgHBw76CAUK+vkGBPz6CQsM+ff39gz/VWmMYAAAQaSURBVHgBrZnpYqs4DIXlshgRErIwQ6Ek3And973v/2Szz8hxDsXm8v25S4sU6UiKbMgNdRKEUawT/pNEp1EYzBRNhcrmmgHxIl9OYD1Y8TekP+njZMWDROvxH16zEzqnMWwSFqZ3caJZmN5FEbE3Cw+5f8HZmSoI9SsDytMwyKq/yYKwLhlw1jilRx8bn2dH8W+zXcs22iFN28S2HlbUQ7UrbQ8/BtPPh7SB+n6M2GHkA8VvmXfQzXbxm7v9ck9OdO2wB5SfU+fCLnZuWdqyQXlOHnQHav9wqM/WcwwXLQsX8GGlzfQo8qRIWdCo48z+vaQRXLJwBqoN2R/vIQcCYPv+HrAMOyP/NBpDhwgkSOpnLI1RSzMykQSVYn8EhfSD7gngoL+yKE3TyMdlh0eGBLAgQa3+FazxlcF+LIMCqJj/5WpckjoQwDnsPK8Q9scqXEsAWBfuyIP2qJBuYP9pFlLyILMfK3oDEGbjQmgsU7lVDcItedBZqU2Rlg0LvjI35UGOCtgDFQu+lUp3BznKYKIztkIgD+TT3ZtztAV5FB7Ig/9zNCeiR5Ah4GBOHjwZvdaAGgIp4nxcKzRGvrZ4hRnzLVEYunZYxqZEAfiL0ElJ1WDs+lQpfvpZBtEzbkf52ahOeBFfHfXm6JE8kY/3Slp64pA9mET+ZaRFjhmYKPIzTyopHWzECiEe7YCBA7TknE3rAEzU2YQOhA7smr4OgMi423QzTmRQpnjJ4bgZV6aPoNGwDLFHlq5kAIFRAWoVXhS8sd4sh0aF/DUdPrboNRm8g1scMOzMcQ15ZYMP+f81uigC41qy3BNt8wovheTMBVxsjeJv2C4jeAQW0pnYt12gr0yp0zm5eeA4l9UeHjdkU3mVDQCIIB5e+RCdsM0rPJEt0OIFaCIeoobdk8sWCjtB2Ps42EnhgOV3cGXGPKOvqhpt28NSAyS/4DzQ4KOtX5paErTdWqnrelXU3McVCuDlSHTtdwMoXKIAZCNvPTbE63rA/gakrfM6Thb2lW95ju+FclBXL+REZfgo98qaEkD30n/JrYJ5Xdfz8Fr13bzmeJ3/OYoEBnBtTteRiACgXq6Q1zGsmOGJL4Ua+/OGj1xY47H2JUGTa/wGZuuEGqsVC60imlZjfLOONZ7gteGWhEk0LlZs8klCr8ZqHURxTk58JGwiow9r/Ldt7f5yL9OM7GONxbasisrjlTDIz8FWoRmQLHq74yQ8equ3hRcXQ+hFfvTgMpuLdVyforELSRoG2exvsiBcJXA3gum85oko1wS54mnofQuQ8hS0FQluGuuWXZG9wlFjfRNcK7BlCR6vhK+BbfnhDQ9yCpMjXCHbQpHV31oHHx5pDG2Lj90XFGmeKRrmC9u2UFUQ3tS6/FtR/XUTBpUiJ/4AvNupVaCrjDsAAAAASUVORK5CYII=" InformativeScreenshot="7e5802a0ad405d0c4ae69fba986f3902.png" Reference="j1R2-VyQRkSikjwCu6hTIg/sj2rrdtNT026zAja69tflA" Selector="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" Version="V2" />
-        </uix:NApplicationCard.TargetApp>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </uix:NApplicationCard>
-    </Sequence>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

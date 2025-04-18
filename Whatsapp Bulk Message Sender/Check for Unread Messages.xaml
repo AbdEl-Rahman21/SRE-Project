@@ -1,4 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Check_for_Unread_Messages" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Check_for_Unread_Messages" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_str_groupName" Type="InArgument(x:String)" />
+    <x:Property Name="out_bool_hasUnreadMessages" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -38,6 +44,7 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -90,30 +97,56 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Check_for_Unread_Messages" sap:VirtualizedContainerService.HintSize="1172,961.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="x:Boolean" Default="False" Name="bool_HasUnreadMessages" />
-    </Sequence.Variables>
+  <Sequence DisplayName="Check_for_Unread_Messages" sap:VirtualizedContainerService.HintSize="1172,1072" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="577.6,772.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1054.4,1048.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,473.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1020.8,758.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Unread Messages'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="510.4,412" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="987.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="d5b843b2-973f-4620-855c-c94e8ebf26dd" ContentHash="Qk3P98emsUSz7A2QnPCWRA" CvElementArea="94, 136, 427, 43" CvType="InputBox" DesignTimeRectangle="95, 139, 425, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' /&gt;" FuzzySelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' role='edit' /&gt;" Guid="81775284-bbc3-45b7-a0ed-ba24af3f0681" InformativeScreenshot="b02eb8dd9a19437f62976420c306e2fe.png" Reference="j1R2-VyQRkSikjwCu6hTIg/f_CwrMzTdEyXHV1d1C4q6w" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d5b843b2-973f-4620-855c-c94e8ebf26dd" CvTextArea="139, 87, 102, 22" CvTextArgument="Favorites" CvType="Text" DesignTimeRectangle="140, 86, 397, 35" ElementType="Text" FullSelectorArgument="&lt;uia automationid='LeftPanelTitleText' cls='TextBlock' /&gt;" FuzzySelectorArgument="&lt;uia automationid='LeftPanelTitleText' cls='TextBlock' role='text' /&gt;" Guid="69b66bf8-b71c-4f32-8a49-99da86814095" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_str_groupName + "[k(down)]" + "[k(enter)]"</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="987.2,410.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="467.2,168.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
@@ -124,7 +157,7 @@
                   <Assign sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">
-                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">bool_HasUnreadMessages</CSharpReference>
+                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">out_bool_hasUnreadMessages</CSharpReference>
                       </OutArgument>
                     </Assign.To>
                     <Assign.Value>
@@ -134,12 +167,22 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="467.2,167.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Boolean">
+                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_bool_hasUnreadMessages</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </Assign.Value>
+                  </Assign>
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -153,12 +196,5 @@
         <uix:TargetApp Area="-9, -9, 1938, 1048" ContentHash="7K4FVI452E6sQUiJkLoe9w" FilePath="5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAqFBMVEUAAAAgz3Akz2gl02Uj02cm02Yl1GYl1GYl02Ul02Yl02ck02gl0mUl0mcl1Gcm1GYgz2gl02Uj0mYn02coz2gm1Gkl0mYl0mUk02Uk02Qk02cl1GYgz2Alz2Ul0mYl0mYl1GUn0WYk02Yk0WYk1GYl02Yl0mQk0WYj0mMk02Ym02cj0WUj0mUj1Wck1GYl0WYj02Um0mcl02Yl1GUm1WYm02Yl0mgk02bOtTm3AAAAOHRSTlMAEEBvkK/P3+//v0Bgn59fIL9QbyBfj++/QL+PEDCg3zBwgHBw76CAUK+vkGBPz6CQsM+ff39gz/VWmMYAAAQaSURBVHgBrZnpYqs4DIXlshgRErIwQ6Ek3And973v/2Szz8hxDsXm8v25S4sU6UiKbMgNdRKEUawT/pNEp1EYzBRNhcrmmgHxIl9OYD1Y8TekP+njZMWDROvxH16zEzqnMWwSFqZ3caJZmN5FEbE3Cw+5f8HZmSoI9SsDytMwyKq/yYKwLhlw1jilRx8bn2dH8W+zXcs22iFN28S2HlbUQ7UrbQ8/BtPPh7SB+n6M2GHkA8VvmXfQzXbxm7v9ck9OdO2wB5SfU+fCLnZuWdqyQXlOHnQHav9wqM/WcwwXLQsX8GGlzfQo8qRIWdCo48z+vaQRXLJwBqoN2R/vIQcCYPv+HrAMOyP/NBpDhwgkSOpnLI1RSzMykQSVYn8EhfSD7gngoL+yKE3TyMdlh0eGBLAgQa3+FazxlcF+LIMCqJj/5WpckjoQwDnsPK8Q9scqXEsAWBfuyIP2qJBuYP9pFlLyILMfK3oDEGbjQmgsU7lVDcItedBZqU2Rlg0LvjI35UGOCtgDFQu+lUp3BznKYKIztkIgD+TT3ZtztAV5FB7Ig/9zNCeiR5Ah4GBOHjwZvdaAGgIp4nxcKzRGvrZ4hRnzLVEYunZYxqZEAfiL0ElJ1WDs+lQpfvpZBtEzbkf52ahOeBFfHfXm6JE8kY/3Slp64pA9mET+ZaRFjhmYKPIzTyopHWzECiEe7YCBA7TknE3rAEzU2YQOhA7smr4OgMi423QzTmRQpnjJ4bgZV6aPoNGwDLFHlq5kAIFRAWoVXhS8sd4sh0aF/DUdPrboNRm8g1scMOzMcQ15ZYMP+f81uigC41qy3BNt8wovheTMBVxsjeJv2C4jeAQW0pnYt12gr0yp0zm5eeA4l9UeHjdkU3mVDQCIIB5e+RCdsM0rPJEt0OIFaCIeoobdk8sWCjtB2Ps42EnhgOV3cGXGPKOvqhpt28NSAyS/4DzQ4KOtX5paErTdWqnrelXU3McVCuDlSHTtdwMoXKIAZCNvPTbE63rA/gakrfM6Thb2lW95ju+FclBXL+REZfgo98qaEkD30n/JrYJ5Xdfz8Fr13bzmeJ3/OYoEBnBtTteRiACgXq6Q1zGsmOGJL4Ua+/OGj1xY47H2JUGTa/wGZuuEGqsVC60imlZjfLOONZ7gteGWhEk0LlZs8klCr8ZqHURxTk58JGwiow9r/Ldt7f5yL9OM7GONxbasisrjlTDIz8FWoRmQLHq74yQ8equ3hRcXQ+hFfvTgMpuLdVyforELSRoG2exvsiBcJXA3gum85oko1wS54mnofQuQ8hS0FQluGuuWXZG9wlFjfRNcK7BlCR6vhK+BbfnhDQ9yCpMjXCHbQpHV31oHHx5pDG2Lj90XFGmeKRrmC9u2UFUQ3tS6/FtR/XUTBpUiJ/4AvNupVaCrjDsAAAAASUVORK5CYII=" InformativeScreenshot="7e5802a0ad405d0c4ae69fba986f3902.png" Reference="j1R2-VyQRkSikjwCu6hTIg/sj2rrdtNT026zAja69tflA" Selector="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" Version="V2" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="577.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1">
-      <ui:LogMessage.Message>
-        <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">bool_HasUnreadMessages</CSharpValue>
-        </InArgument>
-      </ui:LogMessage.Message>
-    </ui:LogMessage>
   </Sequence>
 </Activity>

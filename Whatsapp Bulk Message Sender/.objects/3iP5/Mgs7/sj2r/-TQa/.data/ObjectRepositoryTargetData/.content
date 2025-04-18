@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="zuplmwlcU0eSmN0uVf-Yjg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="7lQ_NvOElkOFyAtweRadXg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="cd330962-e3fe-4c29-8943-4640a5a040fe" CvTextArea="545, 702, 99, 17" CvTextArgument="Type a message" CvType="Text" DesignTimeRectangle="534, 691, 788, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to Abdelrahman Ali' /&gt;" FuzzySelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to Abdelrahman Ali' role='edit' /&gt;" Guid="1ee54f7e-6c11-4b20-afc9-fc63a7c0acfc" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="b910982efc46ccc769b7e332efd68f08.png" xmlns="">0NK9No-2sP0y_5or0L2bX3g</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="8befc4f3-d4cf-4ca0-a2c1-7d6d13386cc1" CvTextArea="679, 994, 125, 23" CvTextArgument="Type a message" CvType="Text" DesignTimeRectangle="666, 981, 1198, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to group Test3' /&gt;" FuzzySelectorArgument="&lt;uia automationid='InputBarTextBox' cls='RichEditBox' name='Type to group Test3' role='edit' /&gt;" Guid="6e5218d2-6bd2-4757-b85b-ab4abfb22de1" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8befc4f3-d4cf-4ca0-a2c1-7d6d13386cc1" CvTextArea="679, 994, 125, 23" CvTextArgument="Type a message" CvType="Text" DesignTimeRectangle="679, 994, 125, 23" ElementType="Text" Guid="42a959c2-9b6c-4606-b263-4a5b8d2bfa52" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b1a45c7af4ba340b2c395cb7eae766cc.png" xmlns="">0ujlOvHESx0yT_ZnZXTbxyg</imageRef>
     </TargetAnchorable>
-    <x:String x:Key="ActivityType">TypeInto</x:String>
+    <x:String x:Key="ActivityType">None</x:String>
   </ObjectRepositoryTargetData.Data>
 </ObjectRepositoryTargetData>

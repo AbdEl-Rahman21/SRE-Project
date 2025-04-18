@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AzkRiVMbd0a9Kcn_HD3how" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="222, 111, 1707, 899" DesignTimeScaleFactor="1.25" ElementType="List" FullSelectorArgument="&lt;wnd aaname='Shell Folder View' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Shell Folder View' cls='SHELLDLL_DefView' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;" Guid="19a71085-edb1-4fb7-8ee2-82340c3a827e" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='Media' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V5" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="992f53fbd1aeb19c94786cc6d82f5637.png" xmlns="">0SYx_1XQ6BUaziK7tdqJP0g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">KeyboardShortcut</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

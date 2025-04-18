@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="crdXTiPG9UmSKGp-Ftun0w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="bf850feb-d7c5-400b-bf15-4728c9613c6a" CvTextArea="632, 900, 144, 23" CvTextArgument="[aption (optional)" CvType="Text" DesignTimeRectangle="636, 887, 530, 55" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='CaptionEditBox' cls='RichEditBox' name='Caption (optional)' /&gt;" FuzzySelectorArgument="&lt;uia automationid='CaptionEditBox' cls='RichEditBox' name='Caption (optional)' role='edit' /&gt;" Guid="c146b119-5671-47c2-b222-7fdf7c24a260" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="574, 890, 50, 50" ElementType="Button" FullSelectorArgument="&lt;uia automationid='EmojiButton' cls='Button' name='Add emoji' /&gt;" FuzzySelectorArgument="&lt;uia automationid='EmojiButton' cls='Button' name='Add emoji' role='button' check:fulltext='' /&gt;" Guid="1489caec-f09e-4242-9240-94cf1749384a" SearchSteps="Selector, FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d695d475a377567eaaf22ff2e3ba8d3f.png" xmlns="">0_cfHnqNni0mY94lbLKf7Qg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
