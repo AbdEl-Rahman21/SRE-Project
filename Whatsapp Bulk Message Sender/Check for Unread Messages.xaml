@@ -138,7 +138,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <Delay Duration="00:00:00.5000000" sap:VirtualizedContainerService.HintSize="987.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <Delay Duration="00:00:01.5000000" sap:VirtualizedContainerService.HintSize="987.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="987.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Text="%[k(Down)][k(Enter)]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable CVScreenId="d5b843b2-973f-4620-855c-c94e8ebf26dd" ContentHash="Qk3P98emsUSz7A2QnPCWRA" CvElementArea="94, 136, 427, 43" CvType="InputBox" DesignTimeRectangle="95, 139, 425, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' /&gt;" FuzzySelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' role='edit' /&gt;" Guid="81775284-bbc3-45b7-a0ed-ba24af3f0681" InformativeScreenshot="b02eb8dd9a19437f62976420c306e2fe.png" Reference="j1R2-VyQRkSikjwCu6hTIg/f_CwrMzTdEyXHV1d1C4q6w" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
@@ -150,7 +150,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="987.2,412" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Timeout="2" Version="V4">
+            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="987.2,412" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Timeout="3" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="467.2,168.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>

@@ -39,9 +39,11 @@
     {
       "Path": "Generate Unread Messages Report.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "str_timestamp&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
-        "sGroupNamesForUnreadMessages"
+        "in_arr_groupsWithUnreadMessages"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -62,7 +64,7 @@
       "Path": "Generate Sent Messages Report.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "date_timestamp&Sequence_1"
+        "str_timestamp&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_arr_groupNames"
