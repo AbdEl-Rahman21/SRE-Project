@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Check_for_Unread_Messages" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Check_for_Unread_Messages" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_str_groupName" Type="InArgument(x:String)" />
     <x:Property Name="out_bool_hasUnreadMessages" Type="OutArgument(x:Boolean)" />
@@ -102,25 +102,32 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Check_for_Unread_Messages" sap:VirtualizedContainerService.HintSize="1172,1072" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Check_for_Unread_Messages" sap:VirtualizedContainerService.HintSize="1172.8000000000002,1502.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1054.4,1048.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="WhatsApp" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1054.4,1479.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1020.8,758.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1020.8,1188.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="987.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V4">
+            <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="987.2,92" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
+              <ui:SetToClipboard.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_str_groupName</CSharpValue>
+                </InArgument>
+              </ui:SetToClipboard.Text>
+            </ui:SetToClipboard>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="987.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Text="%[d(ctrl)]v[u(ctrl)]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable CVScreenId="d5b843b2-973f-4620-855c-c94e8ebf26dd" ContentHash="Qk3P98emsUSz7A2QnPCWRA" CvElementArea="94, 136, 427, 43" CvType="InputBox" DesignTimeRectangle="95, 139, 425, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' /&gt;" FuzzySelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' role='edit' /&gt;" Guid="81775284-bbc3-45b7-a0ed-ba24af3f0681" InformativeScreenshot="b02eb8dd9a19437f62976420c306e2fe.png" Reference="j1R2-VyQRkSikjwCu6hTIg/f_CwrMzTdEyXHV1d1C4q6w" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -130,23 +137,20 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
-              <uix:NTypeInto.Text>
-                <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_str_groupName + "[k(down)]" + "[k(enter)]"</CSharpValue>
-                </InArgument>
-              </uix:NTypeInto.Text>
-              <uix:NTypeInto.VerifyOptions>
-                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionTypeIntoOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionTypeIntoOptions.Retry>
-                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                </uix:VerifyExecutionTypeIntoOptions>
-              </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="987.2,410.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Version="V4">
+            <Delay Duration="00:00:00.5000000" sap:VirtualizedContainerService.HintSize="987.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="987.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Text="%[k(Down)][k(Enter)]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="d5b843b2-973f-4620-855c-c94e8ebf26dd" ContentHash="Qk3P98emsUSz7A2QnPCWRA" CvElementArea="94, 136, 427, 43" CvType="InputBox" DesignTimeRectangle="95, 139, 425, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' /&gt;" FuzzySelectorArgument="&lt;uia automationid='SearchQueryTextBox' cls='TextBox' role='edit' /&gt;" Guid="81775284-bbc3-45b7-a0ed-ba24af3f0681" InformativeScreenshot="b02eb8dd9a19437f62976420c306e2fe.png" Reference="j1R2-VyQRkSikjwCu6hTIg/f_CwrMzTdEyXHV1d1C4q6w" ScopeSelectorArgument="&lt;wnd app='applicationframehost.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='WhatsApp' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d5b843b2-973f-4620-855c-c94e8ebf26dd" CvTextArea="139, 87, 102, 22" CvTextArgument="Favorites" CvType="Text" DesignTimeRectangle="140, 86, 397, 35" ElementType="Text" FullSelectorArgument="&lt;uia automationid='LeftPanelTitleText' cls='TextBlock' /&gt;" FuzzySelectorArgument="&lt;uia automationid='LeftPanelTitleText' cls='TextBlock' role='text' /&gt;" Guid="69b66bf8-b71c-4f32-8a49-99da86814095" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="987.2,412" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="35705209-a28a-46ea-80cb-dfb0321c6df1" Timeout="2" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="467.2,168.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
@@ -167,7 +171,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="467.2,167.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="467.2,168.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -12,11 +12,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "arr_groupsWithUnreadMessages&Sequence_1",
-        "bool_hasUnreadMessages&Sequence_1",
         "str_listName&Sequence_1",
         "str_mediaFolderPath&Sequence_1",
-        "arr_groupNames&Sequence_1"
+        "arr_groupNames&Sequence_1",
+        "bool_hasUnreadMessages&Sequence_1",
+        "arr_groupsWithUnreadMessages&Sequence_1",
+        "str_message&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -48,15 +49,11 @@
     {
       "Path": "Extract Data.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "sListName&Sequence_1",
-        "sMediaFolderPath&Sequence_1",
-        "sGroupNamesForUnreadMessages&Sequence_1",
-        "sGroupNamesforSentMessages&Sequence_1",
-        "sGroupNames&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "sListName"
+        "out_str_message",
+        "out_str_mediaFolderPath",
+        "out_str_listName"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -64,9 +61,11 @@
     {
       "Path": "Generate Sent Messages Report.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "date_timestamp&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
-        "sGroupNamesforSentMessages"
+        "in_arr_groupNames"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -75,7 +74,9 @@
       "Path": "Send Message.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_message"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },

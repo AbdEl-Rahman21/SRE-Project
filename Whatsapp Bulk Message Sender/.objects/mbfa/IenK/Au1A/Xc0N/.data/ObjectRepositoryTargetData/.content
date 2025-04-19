@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="A2XL9OtRIUKUijicMOFXyw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="8cac5ab5-ed70-42ea-822a-e8b97964b452" CvTextArea="153, 65, 70, 12" CvTextArgument="Quick access" CvType="Text" DesignTimeRectangle="115, 61, 1033, 22" DesignTimeScaleFactor="1" ElementType="Toolbar" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Quick access' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' title='Address: Quick access' check:text='Address: Quick access' /&gt;" Guid="f3124732-e8f8-4cf0-9045-041bf58c9c41" ScopeSelectorArgument="&lt;wnd app='explorer.exe' cls='CabinetWClass' title='File Explorer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V5" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="3d3f1ccb091e2491afe4ac0e8377731e.png" xmlns="">0xAUIvoOY7U6ezROJbxh-bA</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">TypeInto</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

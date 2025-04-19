@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="oXCxIZ9VNESjj63r97yWtw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="3ef066b9-3ccf-432b-a258-286b6987f4be" CvTextArea="43, 76, 66, 13" CvTextArgument="Document" CvType="Text" DesignTimeRectangle="5, 69, 152, 28" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia cls='MenuFlyoutItem' name='Document' /&gt;" FuzzySelectorArgument="&lt;uia cls='MenuFlyoutItem' name='Document' role='menu item' automationid='' check:fulltext='&amp;#x9;Document' /&gt;" Guid="9169a27a-dbe7-4ad2-a20e-62393f97a7b3" ScopeSelectorArgument="&lt;wnd app='whatsapp.exe' appid='5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App' title='PopupHost' /&gt;" SearchSteps="Selector, FuzzySelector, CV" SelectionStrategy="UIA" Version="V5" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="a49ad9cdcf79a24ab5f034144cec5b5e.png" xmlns="">034WWi7vvJEO6Kh0WMvM-bQ</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">Click</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>
