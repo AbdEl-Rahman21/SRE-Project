@@ -12,12 +12,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_listName&Sequence_1",
         "str_mediaFolderPath&Sequence_1",
         "arr_groupNames&Sequence_1",
         "bool_hasUnreadMessages&Sequence_1",
         "arr_groupsWithUnreadMessages&Sequence_1",
-        "str_message&Sequence_1"
+        "str_message&Sequence_1",
+        "str_listName&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
